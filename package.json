@@ -1,0 +1,50 @@
+{
+  "name": "notedly-api",
+  "version": "1.0.0",
+  "description": "API code examples for JavaScript Everywhere by Adam Scott, published by O'Reilly Media",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node notedly/api/src/index.js",
+    "dev": "nodemon src/index.js",
+    "final": "nodemon final/index.js",
+    "seed": "node final/util/seed/index.js",
+    "lint": "eslint \"src/**/*.js\""
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**.test.js"
+    ]
+  },
+  "keywords": [],
+  "author": "Adam Scott",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^5.0.0",
+    "cors": "2.8.5",
+    "dotenv": "6.1.0",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "graphql": "^15.3.0",
+    "graphql-depth-limit": "1.1.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-validation-complexity": "0.2.4",
+    "helmet": "3.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "marked": "^15.0.0",
+    "md5": "2.2.1",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.2",
+    "nodemon": "^3.1.7",
+    "passport": "^0.7.0",
+    "passport-github2": "0.1.11"
+  },
+  "devDependencies": {
+    "eslint": "5.13.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "faker": "4.1.0",
+    "node-fetch": "^2.7.0",
+    "prettier": "1.18.2"
+  }
+}
