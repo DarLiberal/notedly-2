@@ -14,19 +14,20 @@ if (!DB_HOST) {
 module.exports={
 
     //подключение БД к переменной DB_HOST, которую укажем в главном файле
-    connect: DB_HOST=> {
+    connect: (DB_HOST)=> {
 
         // Подключаемся к БД с правильными опциями которые не нужно указывать в новых версиях, тк они ставятся автоматом
-        mongoose.connect(DB_HOST, { 
-            useNewUrlParser: true, 
-            useUnifiedTopology: true 
-        })
+        mongoose.connect(DB_HOST)
+
+            .then(()=>{
+                console.log('Successfully connected to MongoDB.');
+            })
 
             // Обработка ошибки
             .catch(err => {
                 console.error(err); 
                 console.log('MongoDB connection error. Please make sure MongoDB is running.');
-                process.exit();
+                process.exit(1);
             });
     },
 
