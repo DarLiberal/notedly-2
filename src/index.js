@@ -37,7 +37,7 @@ const resolvers = require('./resolvers');
 const { Token } = require("graphql");
 
 //запускаем сервер на порте из файла .env, или на порте 4000 
-const port=process.env.PORT || 4000;
+const port=process.env.PORT || 10000;
 
 //импорт переменной DB_HOST из файла .env
 const DB_HOST=process.env.DB_HOST;
